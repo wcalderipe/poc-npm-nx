@@ -1,0 +1,20 @@
+{
+  "name": "baz",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "packages/baz/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/packages/baz",
+        "tsConfig": "packages/baz/tsconfig.lib.json",
+        "packageJson": "packages/baz/package.json",
+        "main": "packages/baz/src/index.ts",
+        "assets": ["packages/baz/*.md"]
+      }
+    }
+  }
+}
