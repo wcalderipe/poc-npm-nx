@@ -15,13 +15,20 @@
   "targets": {
     "build": {
       "executor": "@nx/js:tsc",
-      "outputs": ["{options.outputPath}"],
+      "outputs": [
+        "{options.outputPath}"
+      ],
       "options": {
         "outputPath": "dist/packages/sdk",
         "tsConfig": "packages/sdk/tsconfig.lib.json",
         "packageJson": "packages/sdk/package.json",
         "main": "packages/sdk/src/index.ts",
-        "assets": ["packages/sdk/*.md"]
+        "assets": [
+          "packages/sdk/*.md"
+        ],
+        "external": [
+          "@poc-npm-nx/bar"
+        ]
       }
     },
     "nx-release-publish": {
